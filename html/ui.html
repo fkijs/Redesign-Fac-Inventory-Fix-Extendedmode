@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>conde-b1g_inventory V1</title>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+</head>
+
+<body>
+    <script src="js/config.js"></script>
+    <script src="locales/en.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/inventory.js"></script>
+    <script>
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                clickOutside: true
+            });
+        });
+    </script>
+    <div id="notificación">
+    </div>
+    <div id="playerInventoryHotbar">
+    </div>
+    <div class="ui">
+        <div class="inventory">
+            <div id="playerInventory">
+            </div>
+            <div id="controls">
+                <!-- <div class="control3" id="give"></div>
+                    <div class="control4" id="drop"></div> -->
+                    <!-- <div class="text">USE</div> -->
+                    <img src="https://i.imgur.com/SQ9cZZ1.png" alt="Hand" id="use" width="60px" height="60px" style="position: absolute; right: 35%; top: 70px;"></id>
+                    <img src="https://i.imgur.com/HeqT84x.png" alt="Give" id="give" width="50px" height="50px" style="position: absolute; right: 40%; top: 170px;"></id>
+                    <img src="https://i.imgur.com/LlmWQ9e.png" alt="Drop" id="drop" width="50px" height="55px" style="position: absolute; right: 40%; top: 270px;"></id>
+                    <input type="number" class="control" id="count" value="1">
+                    <!-- <img src="https://i.imgur.com/3zBpDIb.png" alt="Hand" id="use" width="100px" height="100px" style="position: absolute; right: 35%; top: 150px;"></id> -->
+                </div>
+            <div id="playerInventoryFastItems">
+            </div>
+            <div class="info-div"></div>
+        </div>
+		<div id="otherInventory">
+            <div id="noSecondInventoryMessage">
+            </div>
+    <div id="dialog">
+        <div id="nearPlayers">
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#use").html(invLocale.useItem);
+        $("#give").html(invLocale.giveItem);
+        $("#drop").html(invLocale.dropItem);
+        $("#noSecondInventoryMessage").html(invLocale.secondInventoryNotAvailable);
+    });
+</script>
+</html>
